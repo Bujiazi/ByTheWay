@@ -113,9 +113,6 @@ def motion_enhance(attn_prob, tau, beta):
 
     attn_prob_scaled = torch.fft.ifft(attn_prob_dft, dim=-1).real
 
-    mask = (attn_prob_scaled > 0)
-    attn_prob_scaled *= mask
-
     sum_dim = attn_prob_scaled.sum(dim=-1, keepdim = True)
     attn_prob_scaled /= sum_dim
     attn_prob_scaled = attn_prob_scaled.reshape(-1, num_frames, num_frames)
@@ -142,16 +139,6 @@ E3 = compute_energy(attention_probs)
 
 # ByTheWay operations are performed in the first 20% denosing steps, in each temporal attention module including up_blocks.1/2/3
 ```
-
-## 🔑 Usage
-
-ByTheWay operations are performed after the vanilla temporal attention operations.
-
-<div style="width: 100%; text-align: center; margin:auto;">
-    <img style="width:100%" src="__assets__/uasge.png">
-</div>
-<br>
-
 
 ## 🔧 ByTheWay Parameters
 
