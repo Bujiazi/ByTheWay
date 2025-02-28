@@ -1,6 +1,6 @@
 <div align="center">
 
-<h1>BroadWay: Boost Your Text-to-Video Generation Model in a Training-free Way</h1>
+<h1>ByTheWay: Boost Your Text-to-Video Generation Model to Higher Quality in a Training-free Way</h1>
 
 <div>
     <a href="https://github.com/Bujiazi/" target="_blank">Jiazi Bu*</a><sup></sup> | 
@@ -20,11 +20,16 @@
 (*<b>Equal Contribution</b>)(<sup>†</sup><b>Corresponding Author</b>)
 <br><br>
 
-[![arXiv](https://img.shields.io/badge/arXiv-2410.06241-b31b1b.svg)](https://arxiv.org/abs/2410.06241) [![Project Page](https://img.shields.io/badge/Project-Website-green)](https://bujiazi.github.io/BroadWay.github.io/) ![](https://img.shields.io/github/stars/Bujiazi/BroadWay?style=social) 
+<div>
+    <sup></sup><strong>CVPR 2025</strong> 
+</div>
+</br>
+
+[![arXiv](https://img.shields.io/badge/arXiv-2410.06241-b31b1b.svg)](https://arxiv.org/abs/2410.06241)   
 
 ---
 
-<strong>BroadWay provides a training-free and plug-and-play option to enhance the overall quality of current T2V backbones.</strong>
+<strong>ByTheWay provides a training-free and plug-and-play option to enhance the overall quality of current T2V backbones.</strong>
 
 <div style="width: 100%; text-align: center; margin:auto;">
     <img style="width:100%" src="__assets__/pipeline.png">
@@ -32,11 +37,11 @@
 <br>
 
 
-<details><summary>📖 Click for the full abstract of BroadWay</summary>
+<details><summary>📖 Click for the full abstract of ByTheWay</summary>
 
 <div align="left">
 
-> The text-to-video (T2V) generation models, offering convenient visual creation, have recently garnered increasing attention. Despite their substantial potential, the generated videos may present artifacts, including structural implausibility, temporal inconsistency, and a lack of motion, often resulting in near-static video. In this work, we have identified a correlation between the disparity of temporal attention maps across different blocks and the occurrence of temporal inconsistencies. Additionally, we have observed that the energy contained within the temporal attention maps is directly related to the magnitude of motion amplitude in the generated videos. Based on these observations, we present **BroadWay**, a training-free method to improve the quality of text-to-video generation without introducing additional parameters, augmenting memory or sampling time. Specifically, BroadWay is composed of two principal components: 1) Temporal Self-Guidance improves the structural plausibility and temporal consistency of generated videos by reducing the disparity between the temporal attention maps across various decoder blocks. 2) Fourier-based Motion Enhancement enhances the magnitude and richness of motion by amplifying the energy of the map. Extensive experiments demonstrate that BroadWay significantly improves the quality of text-to-video generation with negligible additional cost.
+> The text-to-video (T2V) generation models, offering convenient visual creation, have recently garnered increasing attention. Despite their substantial potential, the generated videos may present artifacts, including structural implausibility, temporal inconsistency, and a lack of motion, often resulting in near-static video. In this work, we have identified a correlation between the disparity of temporal attention maps across different blocks and the occurrence of temporal inconsistencies. Additionally, we have observed that the energy contained within the temporal attention maps is directly related to the magnitude of motion amplitude in the generated videos. Based on these observations, we present **ByTheWay**, a training-free method to improve the quality of text-to-video generation without introducing additional parameters, augmenting memory or sampling time. Specifically, ByTheWay is composed of two principal components: 1) Temporal Self-Guidance improves the structural plausibility and temporal consistency of generated videos by reducing the disparity between the temporal attention maps across various decoder blocks. 2) Fourier-based Motion Enhancement enhances the magnitude and richness of motion by amplifying the energy of the map. Extensive experiments demonstrate that ByTheWay significantly improves the quality of text-to-video generation with negligible additional cost.
 </details>
 </div>
 
@@ -51,21 +56,17 @@
 
 </div>
 
-## 📚 Gallery
-
-We show more results in the [Project Page](https://bujiazi.github.io/BroadWay.github.io/).
 
 ## 🖋 News
-- Project page is ready! (10.15)
-- Code released! (10.14)
-- Paper (**v1**) is available on arXiv! (10.8)
+- ByTheWay accepted to CVPR 2025! (2025.2.27)
+- Code released! (2024.10.14)
+- Paper (**v1**) is available on arXiv! (2024.10.8)
 
 ## 🏗️ Todo
-- [x] 🚀 Release the project page
-- [x] 🚀 Release the BroadWay code
+- [x] 🚀 Release the ByTheWay code
 - [x] 🚀 Release paper
 
-## 💻 BroadWay Code
+## 💻 ByTheWay Code
 ```python
 # ---------- compute the energy of temporal attention map ----------
 def compute_energy(attn_prob):
@@ -124,7 +125,7 @@ def motion_enhance(attn_prob, tau, beta):
 
 # attention_probs (shape [B * H * W, F, F]) is the softmax matrix after performing temporal self attention
 # attention_probs_up1 is the temporal attention map obtained from the corresponding module in up_blocks.1
-# alpha, beta and tau are BroadWay parameters
+# alpha, beta and tau are ByTheWay parameters
 
 # ---------- Temporal Self Guidance ----------
 E1 = compute_energy(attention_probs)
@@ -139,12 +140,12 @@ beta = max(beta, beta_c) # formula (7) in paper
 attention_probs = motion_enhance(attention_probs, tau = tau, beta = beta) # formula (6) in paper
 E3 = compute_energy(attention_probs)
 
-# BroadWay operations are performed in the first 20% denosing steps, in each temporal attention module including up_blocks.1/2/3
+# ByTheWay operations are performed in the first 20% denosing steps, in each temporal attention module including up_blocks.1/2/3
 ```
 
 ## 🔑 Usage
 
-BroadWay operations are performed after the vanilla temporal attention operations.
+ByTheWay operations are performed after the vanilla temporal attention operations.
 
 <div style="width: 100%; text-align: center; margin:auto;">
     <img style="width:100%" src="__assets__/uasge.png">
@@ -152,9 +153,9 @@ BroadWay operations are performed after the vanilla temporal attention operation
 <br>
 
 
-## 🔧 BroadWay Parameters
+## 🔧 ByTheWay Parameters
 
-Here, we provide some reference configurations for BroadWay Parameters. You can adjust these parameters based on your own model and task requirements:
+Here, we provide some reference configurations for ByTheWay Parameters. You can adjust these parameters based on your own model and task requirements:
 
 **AnimateDiff**:
 
@@ -170,7 +171,7 @@ If you find this work helpful, please cite the following paper:
 
 ```
 @article{bu2024broadway,
-  title={BroadWay: Boost Your Text-to-Video Generation Model in a Training-free Way},
+  title={Broadway: Boost your text-to-video generation model in a training-free way},
   author={Bu, Jiazi and Ling, Pengyang and Zhang, Pan and Wu, Tong and Dong, Xiaoyi and Zang, Yuhang and Cao, Yuhang and Lin, Dahua and Wang, Jiaqi},
   journal={arXiv preprint arXiv:2410.06241},
   year={2024}
@@ -179,7 +180,7 @@ If you find this work helpful, please cite the following paper:
 
 ## 📣 Disclaimer
 
-This is the official code of [BroadWay](https://arxiv.org/abs/2410.06241).
+This is the official code of [ByTheWay](https://arxiv.org/abs/2410.06241).
 All the copyrights of the demo images and audio are from community users. 
 Feel free to contact us if you would like to remove them.
 
