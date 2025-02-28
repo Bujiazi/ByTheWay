@@ -52,7 +52,7 @@
 
 <div align="center">
 
-[![]](https://github.com/user-attachments/assets/dbaaf832-5ce4-4922-a48d-21a385cf108b)
+[![]](https://github.com/user-attachments/assets/6462e02a-e383-461f-ae64-b9395dfd2989)
 
 </div>
 
