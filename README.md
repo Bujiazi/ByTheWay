@@ -48,7 +48,7 @@
 </div>
 
 
-## 🎈Demo
+## 🎈Demo Video
 
 <div align="center">
 
@@ -58,7 +58,7 @@
 
 
 ## 🖋 News
-- ByTheWay accepted to CVPR 2025! (2025.2.27)
+- ByTheWay accepted to <strong>CVPR 2025</strong>! (2025.2.27)
 - Code released! (2024.10.14)
 - Paper (**v1**) is available on arXiv! (2024.10.8)
 
