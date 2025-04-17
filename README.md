@@ -3,7 +3,7 @@
 <h1>ByTheWay: Boost Your Text-to-Video Generation Model to Higher Quality in a Training-free Way</h1>
 
 <div>
-    <a href="https://github.com/Bujiazi/" target="_blank">Jiazi Bu*</a><sup></sup> | 
+    <a href="http://bujiazi.github.io/" target="_blank">Jiazi Bu*</a><sup></sup> | 
     <a href="https://github.com/LPengYang/" target="_blank">Pengyang Ling*</a><sup></sup> | 
     <a href="https://panzhang0212.github.io/" target="_blank">Pan Zhang<sup>†</sup></a><sup></sup> | 
     <a href="https://wutong16.github.io/" target="_blank">Tong Wu</a><sup></sup>  <br>
