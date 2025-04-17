@@ -6,7 +6,7 @@
     <a href="https://github.com/Bujiazi/" target="_blank">Jiazi Bu*</a><sup></sup> | 
     <a href="https://github.com/LPengYang/" target="_blank">Pengyang Ling*</a><sup></sup> | 
     <a href="https://panzhang0212.github.io/" target="_blank">Pan Zhang<sup>†</sup></a><sup></sup> | 
-    <a href="https://wutong16.github.io/" target="_blank">Tong Wu</a><sup></sup> |
+    <a href="https://wutong16.github.io/" target="_blank">Tong Wu</a><sup></sup>  <br>
     <a href="https://scholar.google.com/citations?user=FscToE0AAAAJ&hl=en/" target="_blank">Xiaoyi Dong</a><sup></sup> |
     <a href="https://yuhangzang.github.io/" target="_blank">Yuhang Zang</a><sup></sup> |
     <a href="https://scholar.google.com/citations?hl=zh-CN&user=sJkqsqkAAAAJ" target="_blank">Yuhang Cao</a><sup></sup> |
@@ -156,7 +156,7 @@ $\tau = 7, \alpha = 0.1, \beta = 10$
 
 If you find this work helpful, please cite the following paper:
 
-```
+```bibtex
 @article{bu2024broadway,
   title={Broadway: Boost your text-to-video generation model in a training-free way},
   author={Bu, Jiazi and Ling, Pengyang and Zhang, Pan and Wu, Tong and Dong, Xiaoyi and Zang, Yuhang and Cao, Yuhang and Lin, Dahua and Wang, Jiaqi},
