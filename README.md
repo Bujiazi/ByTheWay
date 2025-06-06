@@ -157,11 +157,12 @@ $\tau = 7, \alpha = 0.1, \beta = 10$
 If you find this work helpful, please cite the following paper:
 
 ```bibtex
-@article{bu2024broadway,
-  title={Broadway: Boost your text-to-video generation model in a training-free way},
+@inproceedings{bu2025bytheway,
+  title={ByTheWay: Boost Your Text-to-Video Generation Model to Higher Quality in a Training-free Way},
   author={Bu, Jiazi and Ling, Pengyang and Zhang, Pan and Wu, Tong and Dong, Xiaoyi and Zang, Yuhang and Cao, Yuhang and Lin, Dahua and Wang, Jiaqi},
-  journal={arXiv preprint arXiv:2410.06241},
-  year={2024}
+  booktitle={Proceedings of the Computer Vision and Pattern Recognition Conference},
+  pages={12999--13008},
+  year={2025}
 }
 ```
 
